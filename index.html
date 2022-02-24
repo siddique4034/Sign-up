@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Sign up</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+    font-size: 13pt;
+}
+
+.conatiner{
+  width: 70%;
+  float: left;
+  margin-left: 15%;
+  margin-top: 15%;
+  border: 2px solid darkred;
+  box-shadow: -2px 22px 0px 8px #FFD9D9;
+}
+
+h3, h5{
+  text-align: center;
+  color: darkred;
+  font-weight: 18pt;
+}
+
+#email, #password, #rePassword, #submit {
+  width: 80%;
+  margin-left: 8%;
+  margin-right: 9%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 1px solid indianred;
+}
+
+#email, #password, #rePassword{
+  color: darkred;
+  padding: 8px 5px 5px 8px;
+}
+
+#submit{
+  width: 85%;
+  margin-left: 8%;
+  margin-right: 9%;
+  background-color: darkred;
+  color: white;
+}
+
+#google{
+  width: 55%;
+  margin-left: 21%;
+  margin-right: 21%;
+  border: none;
+  background-color: darkred;
+  color: white;
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="conatiner">
+    <h3>Sign up</h3>
+    <input type="email" name="email" id="email" placeholder="Your primary Email ">
+    <br>
+    <input type="password" name="password" id="password" placeholder="Password">
+    <br>
+    <input type="password" name="rePassword" id="rePassword" placeholder="Re-Type Password">
+    <br>
+    <button type="submit" id="submit" onclick="submit ()">Create your Account !</button>
+    
+    <br>
+    <h3 id="p"></h3>
+  </div>
+  <script>
+    function submit() {
+  let email = document.getElementById("email").value
+let password = document.getElementById("password").value
+let rePassword = document.getElementById("rePassword").value
+let p = document.getElementById("p")
+
+  localStorage.setItem("E-mail : ", email)
+  localStorage.setItem( "Password : ", password)
+  localStorage.setItem("Repassword : ", rePassword)
+  console.log(localStorage)
+  
+  p.textContent = "Your account is being created !"
+}
+
+
+  </script>
+</body>
+</html>
+  
